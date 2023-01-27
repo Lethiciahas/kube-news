@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('https://registry.hub.docker.com/', 'dockerhub')
-                        dockerapp.push("${env.BUILD_ID}")
+                        dockerapp.push()
                 }
             }
         }
